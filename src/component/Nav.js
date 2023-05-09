@@ -1,42 +1,45 @@
-import { AppBar, Box, Button, IconButton, Link, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Button, Toolbar, Typography } from '@mui/material'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
-    return (
-        <div>
-             <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="small"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-        
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Blog
-          </Typography>
-          <Link to="/" > <Button color="secondary">Login</Button></Link>
-          <Link to="/add"> <Button color='secondary'> Add Blog</Button>  </Link>
+  return (
+    <div>
 
-       
-          
-        
-          
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static">
+          <Toolbar>
 
 
-        </Toolbar>
-       
-      </AppBar>
-    </Box>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              Blog
+            </Typography>
+            <Link to='/'>
+
+              <Button variant='contained' color="success">Home</Button>
+            </Link>
+            <Link to='/add'>
+              <Button variant='contained' color='success'>Addd Blog</Button>
+            </Link>
+
+          </Toolbar>
 
 
-            
-        </div>
-    )
+        </AppBar>
+
+      </Box>
+
+
+
+
+
+
+
+
+
+    </div>
+
+  )
 }
 
 export default Nav
